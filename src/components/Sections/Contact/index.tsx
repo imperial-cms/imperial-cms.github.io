@@ -4,11 +4,11 @@ import {FC, memo} from 'react';
 
 import {contact, SectionId} from '../../../data/data';
 import {ContactType, ContactValue} from '../../../data/dataDef';
-import FacebookIcon from '../../Icon/FacebookIcon';
-import GithubIcon from '../../Icon/GithubIcon';
+// import FacebookIcon from '../../Icon/FacebookIcon';
+// import GithubIcon from '../../Icon/GithubIcon';
 import InstagramIcon from '../../Icon/InstagramIcon';
-import LinkedInIcon from '../../Icon/LinkedInIcon';
-import TwitterIcon from '../../Icon/TwitterIcon';
+// import LinkedInIcon from '../../Icon/LinkedInIcon';
+// import TwitterIcon from '../../Icon/TwitterIcon';
 import Section from '../../Layout/Section';
 import ContactForm from './ContactForm';
 
@@ -16,10 +16,10 @@ const ContactValueMap: Record<ContactType, ContactValue> = {
   [ContactType.Email]: {Icon: EnvelopeIcon, srLabel: 'Email'},
   [ContactType.Phone]: {Icon: DevicePhoneMobileIcon, srLabel: 'Phone'},
   [ContactType.Location]: {Icon: MapPinIcon, srLabel: 'Location'},
-  [ContactType.Github]: {Icon: GithubIcon, srLabel: 'Github'},
-  [ContactType.LinkedIn]: {Icon: LinkedInIcon, srLabel: 'LinkedIn'},
-  [ContactType.Facebook]: {Icon: FacebookIcon, srLabel: 'Facebook'},
-  [ContactType.Twitter]: {Icon: TwitterIcon, srLabel: 'Twitter'},
+  // [ContactType.Github]: {Icon: GithubIcon, srLabel: 'Github'},
+  // [ContactType.LinkedIn]: {Icon: LinkedInIcon, srLabel: 'LinkedIn'},
+  // [ContactType.Facebook]: {Icon: FacebookIcon, srLabel: 'Facebook'},
+  // [ContactType.Twitter]: {Icon: TwitterIcon, srLabel: 'Twitter'},
   [ContactType.Instagram]: {Icon: InstagramIcon, srLabel: 'Instagram'},
 };
 
@@ -61,8 +61,7 @@ const Contact: FC = memo(() => {
               })}
             </dl>
 
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.7905389522507!2d-0.18200738767263072!3d51.498711171693664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876055c80f1ea8f%3A0x932ef9221228cde6!2sImperial%20College%20London%2C%20South%20Kensington%20Campus!5e0!3m2!1sen!2suk!4v1690665717093!5m2!1sen!2suk" 
-            width="400" height="300" style={{border:"0"}} loading="lazy"></iframe>
+            {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.7905389522507!2d-0.18200738767263072!3d51.498711171693664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876055c80f1ea8f%3A0x932ef9221228cde6!2sImperial%20College%20London%2C%20South%20Kensington%20Campus!5e0!3m2!1sen!2suk!4v1690665717093!5m2!1sen!2suk" width="400" height="300" style={{border:"0"}} loading="lazy"></iframe> */}
           </div>
         </div>
       </div>
