@@ -13,7 +13,7 @@ import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
 import TwitterIcon from '../components/Icon/TwitterIcon';
-import heroImage from '../images/header-background.webp';
+import homeImage from '../images/home-bg.jpeg';
 import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
 import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
 import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
@@ -25,13 +25,13 @@ import porfolioImage8 from '../images/portfolio/portfolio-8.jpg';
 import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
 import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
 import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
-import profilepic from '../images/profilepic.jpg';
+import profilepic from '../images/logo.png';
 import testimonialImage from '../images/testimonial.webp';
 import {
   About,
   ContactSection,
   ContactType,
-  Hero,
+  Home,
   HomepageMeta,
   PortfolioItem,
   SkillGroup,
@@ -52,7 +52,7 @@ export const homePageMeta: HomepageMeta = {
  * Section definition
  */
 export const SectionId = {
-  Hero: 'hero',
+  Home: 'home',
   About: 'about',
   Contact: 'contact',
   Portfolio: 'portfolio',
@@ -65,37 +65,29 @@ export const SectionId = {
 export type SectionId = typeof SectionId[keyof typeof SectionId];
 
 /**
- * Hero section
+ * Home section
  */
-export const heroData: Hero = {
-  imageSrc: heroImage,
-  name: `I'm Tim Baker.`,
+export const homeData: Home = {
+  imageSrc: homeImage,
+  name: `Welcome to the CMS`,
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Victoria based <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently working
-        at <strong className="text-stone-100">Instant Domains</strong> helping build a modern, mobile-first, domain
-        registrar and site builder.
-      </p>
-      <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time time, you can catch me training in <strong className="text-stone-100">Muay Thai</strong>,
-        plucking my <strong className="text-stone-100">banjo</strong>, or exploring beautiful{' '}
-        <strong className="text-stone-100">Vancouver Island</strong>.
+        The <strong className="text-stone-100">Chamber Music Society</strong> is a student-run society at <strong className="text-stone-100">Imperial College London</strong>.
       </p>
     </>
   ),
   actions: [
     {
-      href: '/assets/resume.pdf',
-      text: 'Resume',
-      primary: true,
-      Icon: ArrowDownTrayIcon,
-    },
-    {
       href: `#${SectionId.Contact}`,
       text: 'Contact',
       primary: false,
     },
+    {
+      href: 'https://www.imperialcollegeunion.org/activities/a-to-z/chamber-music',
+      text: 'Join Us',
+      primary: true,
+    }
   ],
 };
 
@@ -104,17 +96,25 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `Use this bio section as your way of describing yourself and saying what you do, what technologies you like
-  to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing
-  in.`,
-  aboutItems: [
-    {label: 'Location', text: 'Victoria, BC', Icon: MapIcon},
-    {label: 'Age', text: '29', Icon: CalendarIcon},
-    {label: 'Nationality', text: 'Canadian / Irish', Icon: FlagIcon},
-    {label: 'Interests', text: 'Motorcycles, Muay Thai, Banjos', Icon: SparklesIcon},
-    {label: 'Study', text: 'University of Victoria', Icon: AcademicCapIcon},
-    {label: 'Employment', text: 'Instant Domains, inc.', Icon: BuildingOffice2Icon},
-  ],
+  description: 
+  `The Imperial College Chamber Music Society hosts many exciting events for all you music appreciators! 
+  Whether you're a seasoned performer, a 'retired' instrumentalist, an inexperienced player, or don't play an instrument;
+  if you love music of any type, we have something to offer! \n
+  Members can enjoy: \n
+  1) Forming and performing in your own ensembles (pianists are welcome!); 
+  2) Joining competitions, workshops and masterclasses; 
+  3) Performing in concerts, formal and casual, solo and in an ensemble; 
+  4) Attending a broad range of concerts in and out of Imperial (subsidised by the society!); 
+  and 5) Gatherings with FOOD! Follow our instagram account @ic_chambermusic for more information!`,
+  aboutItems: []
+  // [
+  //   {label: 'Location', text: 'Victoria, BC', Icon: MapIcon},
+  //   {label: 'Age', text: '29', Icon: CalendarIcon},
+  //   {label: 'Nationality', text: 'Canadian / Irish', Icon: FlagIcon},
+  //   {label: 'Interests', text: 'Motorcycles, Muay Thai, Banjos', Icon: SparklesIcon},
+  //   {label: 'Study', text: 'University of Victoria', Icon: AcademicCapIcon},
+  //   {label: 'Employment', text: 'Instant Domains, inc.', Icon: BuildingOffice2Icon},
+  // ],
 };
 
 /**
@@ -335,28 +335,23 @@ export const testimonial: TestimonialSection = {
  */
 
 export const contact: ContactSection = {
-  headerText: 'Get in touch.',
-  description: 'Here is a good spot for a message to your readers to let them know how best to reach out to you.',
+  headerText: 'Get in touch',
+  description: 'Feel free to contact us for any enquiries. We are also very happy to collaborate with other organisations/individual musicians.',
   items: [
     {
       type: ContactType.Email,
-      text: 'reachout@timbaker.me',
-      href: 'mailto:reachout@timbaker.me',
-    },
-    {
-      type: ContactType.Location,
-      text: 'Victoria BC, Canada',
-      href: 'https://www.google.ca/maps/place/Victoria,+BC/@48.4262362,-123.376775,14z',
+      text: 'chamber.music@imperial.ac.uk',
+      href: 'mailto:chamber.music@imperial.ac.uk',
     },
     {
       type: ContactType.Instagram,
-      text: '@tbakerx',
-      href: 'https://www.instagram.com/tbakerx/',
+      text: '@ic_chambermusic',
+      href: 'https://www.instagram.com/ic_chambermusic/',
     },
     {
-      type: ContactType.Github,
-      text: 'tbakerx',
-      href: 'https://github.com/tbakerx',
+      type: ContactType.Location,
+      text: 'London, United Kingdom',
+      href: 'https://www.google.ca/maps/place/Victoria,+BC/@48.4262362,-123.376775,14z',
     },
   ],
 };
@@ -365,9 +360,10 @@ export const contact: ContactSection = {
  * Social items
  */
 export const socialLinks: Social[] = [
-  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/tbakerx'},
-  {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/8553186/tim-baker'},
-  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/timbakerx/'},
-  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/tbakerx/'},
-  {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/TimBakerx'},
+  // {label: 'Github', Icon: GithubIcon, href: 'https://github.com/tbakerx'},
+  // {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/8553186/tim-baker'},
+  // {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/timbakerx/'},
+  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/ic_chambermusic/'},
+  // {label: 'XiaoHongShu', Icon: TwitterIcon, href: 'https://www.instagram.com/ic_chambermusic/'},
+  // {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/TimBakerx'},
 ];

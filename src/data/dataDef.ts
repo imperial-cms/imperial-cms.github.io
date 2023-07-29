@@ -18,9 +18,9 @@ export interface HomepageMeta {
 }
 
 /**
- * Hero section
+ * Home section
  */
-export interface Hero {
+export interface Home {
   imageSrc: string;
   name: string;
   description: JSX.Element;

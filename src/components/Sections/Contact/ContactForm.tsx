@@ -62,7 +62,7 @@ const ContactForm: FC = memo(() => {
         onChange={onChange}
         placeholder="Message"
         required
-        rows={6}
+        rows={15}
       />
       <button
         aria-label="Submit contact form"

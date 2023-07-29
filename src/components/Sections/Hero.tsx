@@ -3,15 +3,15 @@ import classNames from 'classnames';
 import Image from 'next/image';
 import {FC, memo} from 'react';
 
-import {heroData, SectionId} from '../../data/data';
+import {homeData, SectionId} from '../../data/data';
 import Section from '../Layout/Section';
 import Socials from '../Socials';
 
 const Hero: FC = memo(() => {
-  const {imageSrc, name, description, actions} = heroData;
+  const {imageSrc, name, description, actions} = homeData;
 
   return (
-    <Section noPadding sectionId={SectionId.Hero}>
+    <Section noPadding sectionId={SectionId.Home}>
       <div className="relative flex h-screen w-full items-center justify-center">
         <Image
           alt={`${name}-image`}
@@ -21,9 +21,12 @@ const Hero: FC = memo(() => {
           src={imageSrc}
         />
         <div className="z-10  max-w-screen-lg px-4 lg:px-0">
+          {/* blur block */}
           <div className="flex flex-col items-center gap-y-6 rounded-xl bg-gray-800/40 p-6 text-center shadow-lg backdrop-blur-sm">
             <h1 className="text-4xl font-bold text-white sm:text-5xl lg:text-7xl">{name}</h1>
             {description}
+
+            <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">Follow us on social media:</p>
             <div className="flex gap-x-4 text-neutral-100">
               <Socials />
             </div>
